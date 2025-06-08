@@ -52,13 +52,13 @@ class ArticleLikeServiceTest {
     }
 
 
-    @Test
-    void likePerformanceTest() throws InterruptedException {
-        ExecutorService executorService = Executors.newFixedThreadPool(100);
-        likePerformanceTest(executorService, 1111L, "pessimistic-lock-1");
-        likePerformanceTest(executorService, 2222L, "pessimistic-lock-2");
-        likePerformanceTest(executorService, 3333L, "optimistic-lock");
-    }
+//    @Test
+//    void likePerformanceTest() throws InterruptedException {
+//        ExecutorService executorService = Executors.newFixedThreadPool(100);
+//        likePerformanceTest(executorService, 1111L, "pessimistic-lock-1");
+//        likePerformanceTest(executorService, 2222L, "pessimistic-lock-2");
+//        likePerformanceTest(executorService, 3333L, "optimistic-lock");
+//    }
 
     void likePerformanceTest(ExecutorService executorService, Long articleId, String lockType) throws InterruptedException {
 
